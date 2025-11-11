@@ -1,0 +1,110 @@
+body {
+    margin: 0 0 0 0;
+    width: 100%;
+}
+.container {
+    width: 100%;
+    background: rgb(255,255,255);
+}
+
+.imgwrapper a {
+    /* background: rgba(255, 0, 0, 0.3); */
+    transform: translate(-50%, 0); /* Y축 이동 제거 */
+    display: block;
+    position: absolute;
+    height: min(12vw, 105px);
+}
+
+div {
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat !important; 
+    width: 100%;
+}
+
+.imgwrapper {
+    position: relative; /* 내부 요소 absolute 배치를 위해 필요 */
+    margin: 0 auto;
+    max-width: 768px;
+    width: 100%;
+}
+
+#main-content {
+    aspect-ratio: 768 / 10244;
+    background-image: url('images/mo.jpg');
+}
+#bg {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/pc.jpg');
+  background-size: cover;
+  pointer-events: none; 
+  display: none; 
+}
+
+/* 1200px 이상일 때만 보이게 */
+@media (min-width: 1200px) {
+  #bg {
+    display: block;
+  }
+}
+/* #header {
+    aspect-ratio: 1100 / 1802;
+    background-image: url('images/TOP.png');
+}
+
+
+
+#main-content a {
+    width: 67.5%;
+    top: 94.5%;
+    left: 50%;
+}
+
+#sub-title {
+    aspect-ratio: 1100 / 2944;
+    background-image: url('images/img2.png');
+}
+
+#sub-title a {
+    width: 67.5%;
+    top: 91.5%;
+    left: 50%;
+}
+
+#first-link-container {
+    aspect-ratio: 1100 / 2945;
+    background-image: url('images/img3.png');
+}
+
+#first-link-container a {
+    width: 67.5%;
+    top: 91.5%;
+    left: 50%;
+}
+
+#second-link-container {
+    aspect-ratio: 1100 / 4324;
+    background-image: url('images/img4.png');
+}
+
+#second-link-container a {
+    width: 62.5%;
+    top: 40.5%;
+    left: 50%;
+} */
+
+/* @media screen and (min-width: 768px) {
+
+
+}
+@media screen and (min-width: 1200px) {
+    #bg {
+        visibility: visible;
+        background-image: url('images/pc.jpg');
+        width: 100%;
+    }
+} */
