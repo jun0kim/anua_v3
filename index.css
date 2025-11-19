@@ -1,110 +1,179 @@
 body {
-    margin: 0 0 0 0;
-    width: 100%;
-}
-.container {
-    width: 100%;
-    background: rgb(255,255,255);
+    margin: 0;
+    overflow-x: hidden;
 }
 
-.imgwrapper a {
-    /* background: rgba(255, 0, 0, 0.3); */
-    transform: translate(-50%, 0); /* Y축 이동 제거 */
-    display: block;
-    position: absolute;
-    height: min(12vw, 105px);
-}
+/* #main-content {
+    aspect-ratio: 768 / 10303;
+    background-image: url('images/1117_vtuber_page_mo.jpg');
+} */
 
-div {
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat !important; 
-    width: 100%;
-}
-
-.imgwrapper {
-    position: relative; /* 내부 요소 absolute 배치를 위해 필요 */
-    margin: 0 auto;
-    max-width: 768px;
-    width: 100%;
-}
-
-#main-content {
-    aspect-ratio: 768 / 10244;
-    background-image: url('images/mo.jpg');
-}
-#bg {
+/* ===== 전체 배경 ===== */
+#bg_overlay {
   position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/pc.jpg');
+  background-image: url('images/img_pc/pc_배경.png');
   background-size: cover;
   pointer-events: none; 
-  display: none; 
+  display: block; 
+  z-index: -1;
 }
 
-/* 1200px 이상일 때만 보이게 */
-@media (min-width: 1200px) {
-  #bg {
+/* ===== 중앙 스크롤 영역 ===== */
+.layout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .center {
+    width: min(100%, 400px);
+    padding: 0;
+} */
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* .center-img {
+    width: 100%;
+    height: auto;
+} */
+
+.center-img {
+    width: clamp(400px, 35vw, 768px);
+    height: auto;
     display: block;
-  }
-}
-/* #header {
-    aspect-ratio: 1100 / 1802;
-    background-image: url('images/TOP.png');
 }
 
 
+/* ===== 왼쪽 패널 ===== */
 
-#main-content a {
-    width: 67.5%;
-    top: 94.5%;
+.side.left {
+    position: fixed;
+    left: 5vw;
+    top: clamp(200px, 20vh, 300px);
+    text-align: center;
+    pointer-events: none;
+}
+
+/* logo */
+.side.left .logo {
+    width: clamp(120px, 14vw, 400px);
+    margin-bottom: 120px;
+}
+
+/* l1 + l2 한 줄 */
+.side.left .left-pair {
+    display: flex;
+    justify-content: center; /* 가로 한 줄 가운데 정렬 */
+    align-items: flex-ender;
+    gap: 1vw;                 /* 두 이미지 사이 간격 */
+
+}
+
+/* 각각 이미지 크기 */
+.side.left .left-pair img {
+    width: clamp(80px, 14vw, 4000px);
+}
+
+
+/* ===== 오른쪽 패널 ===== */
+
+.side-right {
+    position: fixed;
+    /* right: 2vw; */
+    right: clamp(16px, 3vw, 48px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(250px, 25vw, 380px);
+    height: 70vh;
+}
+
+/* all right images absolute positioned */
+.side-right img {
+    position: absolute;
+    width: clamp(40px, 5vw, 80px);
+}
+
+/* 3-2-3 아래 기준 라인 정렬(예시) */
+.r6 { left: 0%;   bottom: 0%; }
+.r7 { left: 33%;  bottom: 0%; }
+.r8 { left: 66%;  bottom: 0%; }
+
+.r4 { left: 15%;  bottom: 30%; }
+.r5 { left: 50%;  bottom: 30%; }
+
+.r1 { left: 0%;   bottom: 70%; }
+.r2 { left: 33%;  bottom: 70%; }
+.r3 { left: 66%;  bottom: 70%; }
+
+
+.btn {
+    background: rgba(255, 0, 0, 0.3);
+    transform: translate(-50%, 0); /* Y축 이동 제거 */
+    display: block;
+    position: absolute;
+    height: min(10vw, 40px);
+}
+
+#b1 { 
+    width: max(18vw, 200px);
+    top: 30.2%;
+    left: 68%;
+}
+
+#b2 { 
+    width: max(18vw, 200px);
+    top: 49.3%;
+    left: 66%;
+
+}
+
+#b3 { 
+    width: max(30vw, 360px);
+    top: 60.5%;
     left: 50%;
-}
-
-#sub-title {
-    aspect-ratio: 1100 / 2944;
-    background-image: url('images/img2.png');
-}
-
-#sub-title a {
-    width: 67.5%;
-    top: 91.5%;
-    left: 50%;
-}
-
-#first-link-container {
-    aspect-ratio: 1100 / 2945;
-    background-image: url('images/img3.png');
-}
-
-#first-link-container a {
-    width: 67.5%;
-    top: 91.5%;
-    left: 50%;
-}
-
-#second-link-container {
-    aspect-ratio: 1100 / 4324;
-    background-image: url('images/img4.png');
-}
-
-#second-link-container a {
-    width: 62.5%;
-    top: 40.5%;
-    left: 50%;
-} */
-
-/* @media screen and (min-width: 768px) {
-
 
 }
-@media screen and (min-width: 1200px) {
-    #bg {
-        visibility: visible;
-        background-image: url('images/pc.jpg');
-        width: 100%;
+
+
+/* ===== 모바일: 좌우 제거 ===== */
+@media (max-width: 768px) {
+    .center-img { 
+        width: 100%; 
     }
-} */
+
+    .side.left,
+    .side-right {
+        display: none;
+    }
+    .center {
+        width: 100%;
+        padding: 0;
+    }
+
+    #b1 {
+        width: 50vw;
+    }   
+
+    #b2 {
+        width: 50vw;
+    }   
+
+    #b3 {
+        width: 80vw;
+        height: 10vw;
+    }
+}
