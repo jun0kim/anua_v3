@@ -121,7 +121,7 @@ body {
 
 
 .btn {
-    background: rgba(255, 0, 0, 0.3);
+    /* background: rgba(255, 0, 0, 0.3); */
     transform: translate(-50%, 0); /* Y축 이동 제거 */
     display: block;
     position: absolute;
